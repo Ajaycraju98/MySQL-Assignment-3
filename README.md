@@ -25,19 +25,24 @@ insert INTO managers (First_name,Last_Name,DOB,Age,Last_update,Gender,Department
 
 select*from managers;
 
-#2. Write a query that retrieves the name and date of birth of the manager with Manager_Id 1. 
+#2. Write a query that retrieves the name and date of birth of the manager with Manager_Id 1 :
+
 select First_name , DOB from managers where Manager_Id=1;
 
 
-#3. Write a query to display the annual income of all managers. 
+#3. Write a query to display the annual income of all managers :
+
 select Manager_Id,First_name,Last_Name,12*Salary as Annuual_income from managers;
 
-#4. Write a query to display records of all managers except ‘Aaliya’.
+#4. Write a query to display records of all managers except ‘Aaliya’:
+
 SELECT * FROM managers WHERE First_name NOT IN  ('Aaliya');
 
 
-#5. Write a query to display details of managers whose department is IT and earns more than 25000 per month. 
+#5. Write a query to display details of managers whose department is IT and earns more than 25000 per month :
+
 SELECT * FROM managers WHERE Department='IT' AND Salary>25000;
 
-#6. Write a query to display details of managers whose salary is between 10000 and 35000.
+#6. Write a query to display details of managers whose salary is between 10000 and 35000 :
+
 SELECT * FROM managers WHERE Salary BETWEEN 10000 AND 35000;
